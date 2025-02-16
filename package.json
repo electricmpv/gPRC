@@ -1,0 +1,18 @@
+{
+  "name": "grpc-demo",
+  "version": "1.0.0",
+  "description": "A gRPC demo project",
+  "main": "index.js",
+  "scripts": {
+    "gen":"grpc_tools_node_protoc --js_out=import_style=commonjs,binary:./gen --grpc_out=grpc_js:./gen --ts_out=grpc_js:./gen ./test.proto",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.14",
+    "grpc-tools": "~1.11.3",
+    "grpc_tools_node_protoc_ts": "^5.3.3"
+  }
+}
