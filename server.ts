@@ -6,10 +6,13 @@ const server = new grpc.Server();
 
 server.addService(TestService, {
   sayTest: (call:any, callback:any) => {
-    console.log(call.request.getName());
-    const res = new TestRes();
-    res.setName("Test " + call.request.getName());
-    callback(null, res);
+    call.on("data", (data:any) => {
+      console.log("data", data);
+      const res = new TestRes();
+      res.setName("Test ");
+      call.write(res);
+    });
+  
   },
 });
 

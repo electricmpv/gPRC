@@ -30,8 +30,8 @@ function deserialize_test_TestRes(buffer_arg) {
 var TestService = exports.TestService = {
   sayTest: {
     path: '/test.Test/SayTest',
-    requestStream: false,
-    responseStream: false,
+    requestStream: true,
+    responseStream: true,
     requestType: test_pb.TestReq,
     responseType: test_pb.TestRes,
     requestSerialize: serialize_test_TestReq,

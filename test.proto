@@ -2,7 +2,7 @@ syntax = "proto3";
 package test;
 
 service Test{
-  rpc SayTest(TestReq)returns(TestRes){}
+  rpc SayTest(stream TestReq)returns(stream TestRes){}
 }
 
 message TestReq{
